@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace SmamForms
 {
@@ -38,7 +39,7 @@ namespace SmamForms
             }
             else
             {
-                save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
+                save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, Convert.ToString(numericUpDown1.Value));
                 Properties.Settings.Default.hasStarted = 1.ToString();
                 save.isInstalled();
                 homePage home = new homePage();
@@ -51,5 +52,6 @@ namespace SmamForms
         {
             Application.Exit();
         }
+
     }
 }

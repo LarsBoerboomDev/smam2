@@ -36,6 +36,8 @@
             this.buttonRecept = new System.Windows.Forms.Button();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonFinancien = new System.Windows.Forms.Button();
+            this.buttonStudie = new System.Windows.Forms.Button();
+            this.buttonProf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTipVDDag
@@ -62,7 +64,7 @@
             this.buttonShoppingList.Name = "buttonShoppingList";
             this.buttonShoppingList.Size = new System.Drawing.Size(100, 100);
             this.buttonShoppingList.TabIndex = 2;
-            this.buttonShoppingList.Text = "Boodschappen";
+            this.buttonShoppingList.Text = "Boodschappen- lijstjes";
             this.buttonShoppingList.UseVisualStyleBackColor = true;
             this.buttonShoppingList.Click += new System.EventHandler(this.buttonShoppingList_Click);
             // 
@@ -72,7 +74,7 @@
             this.buttonHuishouden.Name = "buttonHuishouden";
             this.buttonHuishouden.Size = new System.Drawing.Size(100, 100);
             this.buttonHuishouden.TabIndex = 3;
-            this.buttonHuishouden.Text = "Huishouden";
+            this.buttonHuishouden.Text = "Handleidingen";
             this.buttonHuishouden.UseVisualStyleBackColor = true;
             this.buttonHuishouden.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -82,7 +84,7 @@
             this.buttonPOI.Name = "buttonPOI";
             this.buttonPOI.Size = new System.Drawing.Size(100, 100);
             this.buttonPOI.TabIndex = 4;
-            this.buttonPOI.Text = "POI";
+            this.buttonPOI.Text = "Hoe ziet mijn plaats eruit?";
             this.buttonPOI.UseVisualStyleBackColor = true;
             this.buttonPOI.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -92,7 +94,7 @@
             this.buttonRecept.Name = "buttonRecept";
             this.buttonRecept.Size = new System.Drawing.Size(100, 100);
             this.buttonRecept.TabIndex = 5;
-            this.buttonRecept.Text = "Recept";
+            this.buttonRecept.Text = "Hoe maak ik iets lekkers te eten?";
             this.buttonRecept.UseVisualStyleBackColor = true;
             this.buttonRecept.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -102,7 +104,7 @@
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(100, 100);
             this.buttonSetting.TabIndex = 6;
-            this.buttonSetting.Text = "Instellingen";
+            this.buttonSetting.Text = "Mijn gegevens aanpassen";
             this.buttonSetting.UseVisualStyleBackColor = true;
             this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
@@ -112,9 +114,29 @@
             this.buttonFinancien.Name = "buttonFinancien";
             this.buttonFinancien.Size = new System.Drawing.Size(100, 100);
             this.buttonFinancien.TabIndex = 7;
-            this.buttonFinancien.Text = "Financien";
+            this.buttonFinancien.Text = "Hoe ga ik met mijn geld om?";
             this.buttonFinancien.UseVisualStyleBackColor = true;
             this.buttonFinancien.Click += new System.EventHandler(this.buttonFinancien_Click);
+            // 
+            // buttonStudie
+            // 
+            this.buttonStudie.Location = new System.Drawing.Point(60, 153);
+            this.buttonStudie.Name = "buttonStudie";
+            this.buttonStudie.Size = new System.Drawing.Size(100, 100);
+            this.buttonStudie.TabIndex = 8;
+            this.buttonStudie.Text = "Hoe haal ik alles uit mijn studie?";
+            this.buttonStudie.UseVisualStyleBackColor = true;
+            this.buttonStudie.Click += new System.EventHandler(this.buttonStudie_Click);
+            // 
+            // buttonProf
+            // 
+            this.buttonProf.Location = new System.Drawing.Point(166, 153);
+            this.buttonProf.Name = "buttonProf";
+            this.buttonProf.Size = new System.Drawing.Size(100, 100);
+            this.buttonProf.TabIndex = 9;
+            this.buttonProf.Text = "Professionele ontwikkeling";
+            this.buttonProf.UseVisualStyleBackColor = true;
+            this.buttonProf.Click += new System.EventHandler(this.buttonProf_Click);
             // 
             // homePage
             // 
@@ -122,6 +144,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(339, 611);
+            this.Controls.Add(this.buttonProf);
+            this.Controls.Add(this.buttonStudie);
             this.Controls.Add(this.buttonFinancien);
             this.Controls.Add(this.buttonSetting);
             this.Controls.Add(this.buttonRecept);
@@ -131,7 +155,7 @@
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelTipVDDag);
             this.Name = "homePage";
-            this.Text = "homePage";
+            this.Text = "SMAM";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +171,7 @@
         private System.Windows.Forms.Button buttonRecept;
         private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.Button buttonFinancien;
+        private System.Windows.Forms.Button buttonStudie;
+        private System.Windows.Forms.Button buttonProf;
     }
 }

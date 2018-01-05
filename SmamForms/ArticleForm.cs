@@ -32,6 +32,7 @@ namespace SmamForms
 
         private void ArticleForm_Load(object sender, EventArgs e)
         {
+            this.Text = articleName;
             labelTitelArticle.Text = articleName;
             labelTitelArticle.Left = (this.ClientSize.Width - labelTitelArticle.Width) / 2;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test

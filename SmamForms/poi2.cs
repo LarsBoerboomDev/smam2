@@ -23,6 +23,7 @@ namespace SmamForms
             CenterToScreen();
             saveUserSettings settings = new saveUserSettings();
             city = settings.getCity();
+            this.Text = city;
             comboBox1.SelectedIndex = 0;
             InitializeChromium();
         }

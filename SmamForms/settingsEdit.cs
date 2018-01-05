@@ -25,10 +25,10 @@ namespace SmamForms
 
         private void getSettings()
         {
-             settings = new saveUserSettings();
+            settings = new saveUserSettings();
             userSetting userSettings = settings.getSettings();
             textBoxName.Text = userSettings.Name;
-            textBoxHuur.Text = userSettings.RentDay;
+            numericUpDown1.Value = Convert.ToDecimal(userSettings.RentDay);
             textBoxCity.Text = userSettings.City;
             textBoxOpleiding.Text = userSettings.Education;
             textBoxSchool.Text = userSettings.School;
@@ -54,7 +54,7 @@ namespace SmamForms
             }
             else
             {
-                settings.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
+                settings.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, numericUpDown1.Value.ToString());
                 this.Close();
             }
         }

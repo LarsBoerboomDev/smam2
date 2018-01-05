@@ -23,8 +23,10 @@ namespace SmamForms
             this.naamType = naamtype;
         }
 
+
         private void Typelist_Load(object sender, EventArgs e)
         {
+            this.Text = smamControl.GetTypeName(naamType);
             labelTitle.Text = smamControl.GetTypeName(naamType);
             foreach (string item in smamControl.GetArticleTitles(naamType))
             {
