@@ -28,3 +28,33 @@ C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\x64\Debug\MySql.Data.xml
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\x64\Debug\SmamForms.exe
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\x64\Debug\SmamForms.pdb
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.ArticleForm.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.Home.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.homePage.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.poi2.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.Properties.Resources.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.settingsEdit.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.SettingsForm.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.shoppingList.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.SplashScreenForm.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.startSettings.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.Typelist.resources
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.csproj.GenerateResource.Cache
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.csproj.CoreCompileInputs.cache
+D:\Smam2\SmamForms\bin\x64\Debug\SmamForms.exe.config
+D:\Smam2\SmamForms\bin\x64\Debug\SmamForms.exe
+D:\Smam2\SmamForms\bin\x64\Debug\SmamForms.pdb
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.Core.dll
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.dll
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.WinForms.dll
+D:\Smam2\SmamForms\bin\x64\Debug\MySql.Data.dll
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.WinForms.pdb
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.WinForms.xml
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.pdb
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.xml
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.Core.pdb
+D:\Smam2\SmamForms\bin\x64\Debug\CefSharp.Core.xml
+D:\Smam2\SmamForms\bin\x64\Debug\MySql.Data.xml
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.csprojResolveAssemblyReference.cache
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.exe
+D:\Smam2\SmamForms\obj\x64\Debug\SmamForms.pdb
