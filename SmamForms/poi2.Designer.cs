@@ -38,12 +38,17 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "winkelcentrum",
-            "huisarts",
-            "dierenarts"});
-            this.comboBox1.Location = new System.Drawing.Point(77, 12);
+            "Dierenarts",
+            "Drogist",
+            "Huisarts",
+            "Politiebureau",
+            "Supermarkt",
+            "Tandarts",
+            "Winkelcentrum",
+            "Ziekenhuis"});
+            this.comboBox1.Location = new System.Drawing.Point(55, 21);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 21);
+            this.comboBox1.Size = new System.Drawing.Size(272, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -51,9 +56,9 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(3, 39);
+            this.panel1.Location = new System.Drawing.Point(0, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 465);
+            this.panel1.Size = new System.Drawing.Size(339, 556);
             this.panel1.TabIndex = 1;
             // 
             // buttonBack
@@ -62,7 +67,7 @@
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
-            this.buttonBack.Location = new System.Drawing.Point(3, 3);
+            this.buttonBack.Location = new System.Drawing.Point(12, 12);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(37, 37);
             this.buttonBack.TabIndex = 30;
@@ -74,7 +79,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(299, 505);
+            this.ClientSize = new System.Drawing.Size(339, 611);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);

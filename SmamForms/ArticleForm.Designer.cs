@@ -53,10 +53,10 @@
             // 
             this.labelTitelArticle.AutoSize = true;
             this.labelTitelArticle.BackColor = System.Drawing.Color.White;
-            this.labelTitelArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitelArticle.Location = new System.Drawing.Point(55, 12);
+            this.labelTitelArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitelArticle.Location = new System.Drawing.Point(55, 19);
             this.labelTitelArticle.Name = "labelTitelArticle";
-            this.labelTitelArticle.Size = new System.Drawing.Size(231, 37);
+            this.labelTitelArticle.Size = new System.Drawing.Size(113, 20);
             this.labelTitelArticle.TabIndex = 1;
             this.labelTitelArticle.Text = "Titel van artikel";
             // 

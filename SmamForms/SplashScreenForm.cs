@@ -22,7 +22,7 @@ namespace SmamForms
             time = new Timer();
             //if (Debugger.IsAttached)
             //{
-             //   Settings.Default.Reset();
+            //   Settings.Default.Reset();
             //}
             checkStart();
         }
@@ -31,7 +31,7 @@ namespace SmamForms
             if (Properties.Settings.Default.hasStarted == "1") //als settings bestaan
             {
                 time.Enabled = true;
-                time.Interval = 1000;
+                time.Interval = 750;
                 time.Tick += Timer_Tick;
             }
             else
