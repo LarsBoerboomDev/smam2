@@ -17,8 +17,10 @@ namespace SmamForms
         private Timer time;
         public SplashScreenForm()
         {
+            
             InitializeComponent();
             CenterToScreen();
+            designing();
             time = new Timer();
             //if (Debugger.IsAttached)
             //{
@@ -54,6 +56,13 @@ namespace SmamForms
             startSettings start = new startSettings();
             this.Hide();            
             start.Show();
+        }
+        private void designing()
+        {
+            
+            pictureBoxlogo.Parent = pictureBox1;
+            pictureBoxlogo.BackColor = Color.Transparent;
+            pictureBoxlogo.Location = new Point(101, 235);
         }
     }
 }
