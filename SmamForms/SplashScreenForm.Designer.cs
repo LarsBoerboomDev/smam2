@@ -30,7 +30,9 @@
         {
             this.buttonNext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonNext
@@ -47,13 +49,24 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SmamForms.Properties.Resources.Artboard_1;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 57);
+            this.pictureBox1.Image = global::SmamForms.Properties.Resources.victoria_palacios_355597;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 241);
+            this.pictureBox1.Size = new System.Drawing.Size(342, 618);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxlogo
+            // 
+            this.pictureBoxlogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxlogo.Image = global::SmamForms.Properties.Resources.appLogo;
+            this.pictureBoxlogo.Location = new System.Drawing.Point(101, 235);
+            this.pictureBoxlogo.Name = "pictureBoxlogo";
+            this.pictureBoxlogo.Size = new System.Drawing.Size(160, 160);
+            this.pictureBoxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxlogo.TabIndex = 2;
+            this.pictureBoxlogo.TabStop = false;
             // 
             // SplashScreenForm
             // 
@@ -61,11 +74,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(339, 611);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "SplashScreenForm";
             this.Text = "Smam";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +89,6 @@
 
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxlogo;
     }
 }

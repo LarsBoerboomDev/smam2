@@ -63,9 +63,29 @@ namespace SmamForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appLogo {
+            get {
+                object obj = ResourceManager.GetObject("appLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Artboard_1 {
             get {
                 object obj = ResourceManager.GetObject("Artboard 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap victoria_palacios_355597 {
+            get {
+                object obj = ResourceManager.GetObject("victoria-palacios-355597", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
