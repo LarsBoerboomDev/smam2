@@ -75,6 +75,7 @@
             this.txtArticleText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtArticleText.Size = new System.Drawing.Size(234, 547);
             this.txtArticleText.TabIndex = 9;
+            this.txtArticleText.TabStop = false;
             this.txtArticleText.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtArticleText_MouseDown);
             // 
             // imageList
