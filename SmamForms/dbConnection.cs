@@ -175,13 +175,35 @@ namespace SmamForms
             return products;
         }
 
+        public string GetBackgroundURL(string articleID)
+        {
+            if (conn == null)
+            {
+                conn = new MySqlConnection(connectionString);
+            }
+            string query = "SELECT URL FROM `image` WHERE Article_idArticles = " + articleID + " AND `Name` = 'background'";
+            Console.WriteLine(query);
+            DataTable dataTable = new DataTable();
+            MySqlCommand querycmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            mySqlDataAdapter.SelectCommand = querycmd;
+            mySqlDataAdapter.Fill(dataTable);
+            foreach (DataRow item in dataTable.Rows)
+            {
+                output = item["URL"].ToString();
+            }
+            return output;
+        } 
+
+
         public List<string> GetImageURL(string articleID)
         {
             if (conn == null)
             {
                 conn = new MySqlConnection(connectionString);
             }
-            string query = "SELECT URL FROM `image` WHERE Article_idArticles = '" + articleID + "'";
+            string query = "SELECT URL FROM `image` WHERE Article_idArticles = '" + articleID + "' AND `Name` <> 'background'";
+            Console.WriteLine(query);
             List<string> articleURL = new List<string>();
             DataTable dataTable = new DataTable();
             MySqlCommand querycmd = new MySqlCommand(query, conn);
