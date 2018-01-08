@@ -17,9 +17,16 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+            designing();
+            //label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }
+        private void designing()
+        {
 
+            pictureBoxlogo.Parent = pictureBox1;
+            pictureBoxlogo.BackColor = Color.Transparent;
+            pictureBoxlogo.Location = new Point(89, 38);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             saveUserSettings save = new saveUserSettings();
