@@ -51,7 +51,7 @@ namespace SmamForms
             }
             foreach (Control c in Controls)
             {
-                if (c is PictureBox)
+                if (c is PictureBox && c.Name != "pictureBox1") //zijn er plaatjes bij het artikel
                 {
                     txtArticleText.Width = 234;
                     break;
@@ -61,6 +61,31 @@ namespace SmamForms
                     txtArticleText.Width = 315;
                 }
             }
+            loadBG();
+            foreach (Control c in Controls) //plaatjes bij het artikel naar voren zetten
+            {
+                if (c is PictureBox && c.Name != "pictureBox1")
+                {
+                    c.BringToFront();
+                }
+            }
+        }
+
+        private void loadBG()
+        {
+            string articleID = smamControl.GetArticleID(articleName);
+            try
+            {
+                pictureBox1.Load(smamControl.GetBackgroundURL(articleID));
+            }
+            catch (Exception exception)
+            {
+                pictureBox1.BackColor = Color.White;
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
+            labelTitelArticle.Parent = pictureBox1;
+            buttonBack.Parent = pictureBox1;
+            labelTitelArticle.Focus(); //focussen op een label zorgt ervoor dat er geen knipperende cursor is
         }
 
         private void txtArticleText_MouseDown(object sender, MouseEventArgs e)

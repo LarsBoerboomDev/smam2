@@ -65,6 +65,11 @@ namespace SmamForms
             return Dbconn.GetTypeName(type);
         }
 
+        public string GetBackgroundURL(string articleID)
+        {
+            return Dbconn.GetBackgroundURL(articleID);
+        }
+
         public List<String> GetImageURL(string articleID)
         {
             return Dbconn.GetImageURL(articleID);
