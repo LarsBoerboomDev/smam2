@@ -17,14 +17,6 @@ namespace SmamForms
             InitializeComponent();
         }
 
-        private void buttonHamburger_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }
