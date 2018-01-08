@@ -26,6 +26,19 @@ namespace SmamForms
             pictureBoxlogo.Parent = pictureBox1;
             pictureBoxlogo.BackColor = Color.Transparent;
             pictureBoxlogo.Location = new Point(89, 38);
+            label2.Parent = pictureBox1;
+            label2.Location = new Point(12, 236);
+            label3.Parent = pictureBox1;
+            label3.Location = new Point(12, 291);
+            label4.Parent = pictureBox1;
+            label4.Location = new Point(12, 348);
+            label5.Parent = pictureBox1;
+            label5.Location = new Point(12, 408);
+            label6.Parent = pictureBox1;
+            label6.Location = new Point(12, 466);
+            label7.Parent = pictureBox1;
+            label7.Location = new Point(12, 523);
+
         }
         private void button2_Click(object sender, EventArgs e)
         {

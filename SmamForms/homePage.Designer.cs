@@ -52,12 +52,13 @@
             // 
             // labelHint
             // 
-            this.labelHint.AutoSize = true;
-            this.labelHint.Location = new System.Drawing.Point(115, 22);
+            this.labelHint.Location = new System.Drawing.Point(53, 22);
+            this.labelHint.MaximumSize = new System.Drawing.Size(220, 51);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(87, 13);
+            this.labelHint.Size = new System.Drawing.Size(220, 51);
             this.labelHint.TabIndex = 1;
             this.labelHint.Text = "Hier komt een tip";
+            this.labelHint.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel1
             // 
@@ -144,7 +145,7 @@
             this.buttonSetting.BackColor = System.Drawing.Color.Transparent;
             this.buttonSetting.BackgroundImage = global::SmamForms.Properties.Resources.Settings_icon;
             this.buttonSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSetting.Location = new System.Drawing.Point(281, 9);
+            this.buttonSetting.Location = new System.Drawing.Point(279, 12);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(35, 35);
             this.buttonSetting.TabIndex = 6;

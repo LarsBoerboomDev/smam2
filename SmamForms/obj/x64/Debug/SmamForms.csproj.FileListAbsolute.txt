@@ -72,7 +72,6 @@ C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\CefSharp.xml
 C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\CefSharp.Core.pdb
 C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\CefSharp.Core.xml
 C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\MySql.Data.xml
-C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csprojResolveAssemblyReference.cache
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.ArticleForm.resources
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.Home.resources
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.homePage.resources
@@ -88,3 +87,4 @@ C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csproj.GenerateRe
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csproj.CoreCompileInputs.cache
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.exe
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.pdb
+C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csprojResolveAssemblyReference.cache
