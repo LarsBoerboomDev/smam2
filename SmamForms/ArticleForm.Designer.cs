@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArticleForm));
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelTitelArticle = new System.Windows.Forms.Label();
             this.txtArticleText = new System.Windows.Forms.TextBox();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,16 +71,10 @@
             this.txtArticleText.Name = "txtArticleText";
             this.txtArticleText.ReadOnly = true;
             this.txtArticleText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtArticleText.Size = new System.Drawing.Size(234, 547);
+            this.txtArticleText.Size = new System.Drawing.Size(315, 466);
             this.txtArticleText.TabIndex = 9;
             this.txtArticleText.TabStop = false;
             this.txtArticleText.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtArticleText_MouseDown);
-            // 
-            // imageList
-            // 
-            this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList.ImageSize = new System.Drawing.Size(75, 75);
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // pictureBox1
             // 
@@ -118,7 +110,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelTitelArticle;
         private System.Windows.Forms.TextBox txtArticleText;
-        private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
