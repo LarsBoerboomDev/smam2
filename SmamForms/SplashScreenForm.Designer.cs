@@ -77,6 +77,9 @@
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SplashScreenForm";
             this.Text = "Smam";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -79,6 +79,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.labelTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Typelist";
             this.Text = "Typelist";
             this.Load += new System.EventHandler(this.Typelist_Load);

@@ -75,6 +75,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.checkedListBoxProducts);
             this.Controls.Add(this.comboBoxTypes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "shoppingList";
             this.Text = "shoppingList";
             this.ResumeLayout(false);

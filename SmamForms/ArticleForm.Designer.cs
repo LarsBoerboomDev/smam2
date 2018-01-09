@@ -102,7 +102,10 @@
             this.Controls.Add(this.labelTitelArticle);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(355, 650);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(355, 650);
             this.Name = "ArticleForm";
             this.Text = "SMAM";
