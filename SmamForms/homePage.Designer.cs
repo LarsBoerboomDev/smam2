@@ -162,6 +162,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelTipVDDag);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "homePage";
             this.Text = "SMAM";
             this.panel1.ResumeLayout(false);

@@ -202,6 +202,7 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelTitel);
             this.Controls.Add(this.buttonBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(355, 650);
             this.MinimumSize = new System.Drawing.Size(355, 650);
             this.Name = "SettingsForm";

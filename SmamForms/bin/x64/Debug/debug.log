@@ -22,3 +22,4 @@
 [0105/155714.174:WARNING:spdy_session.cc(2276)] Received HEADERS for invalid stream 425
 [0105/155714.178:WARNING:spdy_session.cc(2276)] Received HEADERS for invalid stream 423
 [0108/113444.822:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0109/162502.803:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain

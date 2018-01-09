@@ -194,6 +194,7 @@
             this.Controls.Add(this.textBoxStreet);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "settingsEdit";
             this.Text = "settingsEdit";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

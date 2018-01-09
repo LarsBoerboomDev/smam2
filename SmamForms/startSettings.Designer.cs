@@ -233,6 +233,7 @@
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "startSettings";
             this.Text = "SMAM";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
