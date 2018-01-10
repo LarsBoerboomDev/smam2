@@ -16,9 +16,17 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen(); //Form in het midden zetten
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
         }
-
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             saveUserSettings save = new saveUserSettings();

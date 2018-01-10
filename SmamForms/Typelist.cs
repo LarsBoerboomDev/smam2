@@ -18,11 +18,19 @@ namespace SmamForms
         public Typelist(string naamtype)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             CenterToScreen(); //Form in het midden zetten
             smamControl = new smamController();
             this.naamType = naamtype;
         }
-
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248); 
+            }
+        }
 
         private void Typelist_Load(object sender, EventArgs e)
         {

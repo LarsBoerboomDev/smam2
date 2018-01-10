@@ -18,10 +18,18 @@ namespace SmamForms
         {
             smam = new smamController();
             InitializeComponent();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             CenterToScreen();
             fillHint();
-        }   
-
+        }
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
+        }
         private void fillHint()
         {
             string betaalhuur = "Vergeet vandaag je huur niet te betalen!";

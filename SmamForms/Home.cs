@@ -15,6 +15,7 @@ namespace SmamForms
         public Home()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(248, 248, 248);
         }
 
       

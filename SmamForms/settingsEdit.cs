@@ -18,11 +18,19 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             smam = new smamController();
             getSettings();
             labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
         }
-
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
+        }
         private void getSettings()
         {
             settings = new saveUserSettings();

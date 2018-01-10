@@ -21,11 +21,20 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             saveUserSettings settings = new saveUserSettings();
             city = settings.getCity();
             this.Text = city;
             comboBox1.SelectedIndex = 0;
             InitializeChromium();
+        }
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
         }
         public void InitializeChromium()
         {
