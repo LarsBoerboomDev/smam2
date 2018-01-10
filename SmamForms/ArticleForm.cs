@@ -43,7 +43,7 @@ namespace SmamForms
                 Console.WriteLine(URL); //debuggen
                 PictureBox p = new PictureBox(); //nieuwe picturebox maken
                 p.Size = new System.Drawing.Size(75, 75); //formaat instellen
-                p.Location = new System.Drawing.Point(252, 52 + 81 * i); //locatie instellen
+                p.Location = new System.Drawing.Point(12 + 120 * i, 524); //locatie instellen
                 Console.WriteLine(p.Location.ToString()); //debuggen
                 this.Controls.Add(p); //toevoegen aan form
                 p.Load(URL); //link laden
@@ -53,22 +53,15 @@ namespace SmamForms
             {
                 if (c is PictureBox && c.Name != "pictureBox1") //zijn er plaatjes bij het artikel
                 {
-                    txtArticleText.Width = 234;
+                    txtArticleText.Height = 466;
                     break;
                 }
                 else
                 {
-                    txtArticleText.Width = 315;
+                    txtArticleText.Height = 547;
                 }
             }
-            loadBG();
-            foreach (Control c in Controls) //plaatjes bij het artikel naar voren zetten
-            {
-                if (c is PictureBox && c.Name != "pictureBox1")
-                {
-                    c.BringToFront();
-                }
-            }
+            loadBG(); //achtergrond laden
         }
 
         private void loadBG()
