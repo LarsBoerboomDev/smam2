@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -21,15 +22,34 @@ namespace SmamForms
             this.BackColor = Color.FromArgb(248, 248, 248);
             setbackground();
             CenterToScreen();
+            AddFonts();
             fillHint();
         }
+
         private void setbackground()
         {
             foreach (Control item in this.Controls)
             {
-                item.BackColor = Color.FromArgb(248, 248, 248);
+                if (item.Name != "buttonBack")
+                {
+                    item.BackColor = Color.FromArgb(248, 248, 248);
+                }
             }
         }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+            }
+        }
+
         private void fillHint()
         {
             string betaalhuur = "Vergeet vandaag je huur niet te betalen!";
@@ -45,7 +65,6 @@ namespace SmamForms
                     labelHint.Text = smam.getHint().Body;
                     labelHint.ForeColor = Color.Black;
                 }
-                labelTipVDDag.Left = (this.ClientSize.Width - labelTipVDDag.Width) / 2;
                 labelHint.Left = (this.ClientSize.Width - labelHint.Width) / 2;
             }
             catch (Exception exception)

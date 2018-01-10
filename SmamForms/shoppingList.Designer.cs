@@ -55,7 +55,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.White;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
@@ -77,7 +77,7 @@
             this.Controls.Add(this.comboBoxTypes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "shoppingList";
-            this.Text = "shoppingList";
+            this.Text = "Boodschappenlijstjes";
             this.ResumeLayout(false);
 
         }

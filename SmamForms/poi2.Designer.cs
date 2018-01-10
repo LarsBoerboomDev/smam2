@@ -46,7 +46,7 @@
             "Tandarts",
             "Winkelcentrum",
             "Ziekenhuis"});
-            this.comboBox1.Location = new System.Drawing.Point(55, 21);
+            this.comboBox1.Location = new System.Drawing.Point(55, 19);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(272, 21);
             this.comboBox1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.White;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));

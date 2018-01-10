@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -17,6 +18,7 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
+            AddFonts();
             designing();
             //label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }
@@ -73,5 +75,17 @@ namespace SmamForms
             Application.Exit();
         }
 
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 9, FontStyle.Regular);
+            }
+        }
     }
 }

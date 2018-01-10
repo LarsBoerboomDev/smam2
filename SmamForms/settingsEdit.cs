@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -18,7 +19,7 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            this.BackColor = Color.FromArgb(248, 248, 248);
+            AddFonts();
             setbackground();
             smam = new smamController();
             getSettings();
@@ -26,9 +27,21 @@ namespace SmamForms
         }
         private void setbackground()
         {
+            this.BackColor = Color.FromArgb(248, 248, 248);
             foreach (Control item in this.Controls)
             {
-                item.BackColor = Color.FromArgb(248, 248, 248);
+                if (item is Label)
+                {
+                    item.BackColor = Color.Transparent;
+                }
+                if (item is TextBox || item is NumericUpDown || item.Name == "buttonSave")
+                {
+                    item.BackColor = Color.White;
+                }
+                else
+                {
+                    item.BackColor = Color.FromArgb(248, 248, 248);
+                }
             }
         }
         private void getSettings()
@@ -71,6 +84,20 @@ namespace SmamForms
         {
             Console.WriteLine("Drukte backbutton in");
             this.Hide();
+        }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 9, FontStyle.Regular);
+            }
+            labelTitel.Font = new Font(p.Families[1], 12, FontStyle.Regular);
         }
 
 

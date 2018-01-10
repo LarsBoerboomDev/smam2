@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -20,6 +21,7 @@ namespace SmamForms
             InitializeComponent();
             this.BackColor = Color.FromArgb(248, 248, 248);
             setbackground();
+            AddFonts();
             CenterToScreen(); //Form in het midden zetten
             smamControl = new smamController();
             this.naamType = naamtype;
@@ -62,7 +64,20 @@ namespace SmamForms
             {
                 ExceptionToText ex = new ExceptionToText(exception.ToString());
             }
-            
+        }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+            }
+            labelTitle.Font = new Font(p.Families[1], 12, FontStyle.Regular);
         }
 
     }

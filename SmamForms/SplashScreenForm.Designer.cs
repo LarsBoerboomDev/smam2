@@ -42,7 +42,7 @@
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(75, 23);
             this.buttonNext.TabIndex = 0;
-            this.buttonNext.Text = "Next";
+            this.buttonNext.Text = "Ga door!";
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Visible = false;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
@@ -81,7 +81,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SplashScreenForm";
-            this.Text = "Smam";
+            this.Text = "SMAM";
+            this.Load += new System.EventHandler(this.SplashScreenForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.ResumeLayout(false);
