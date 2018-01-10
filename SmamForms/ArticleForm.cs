@@ -81,7 +81,9 @@ namespace SmamForms
             }
             catch (Exception exception)
             {
+                labelTitelArticle.ForeColor = Color.Black;
                 pictureBox1.BackColor = Color.White;
+                buttonBack.BringToFront();
                 ExceptionToText ex = new ExceptionToText(exception.ToString());
             }
             labelTitelArticle.Parent = pictureBox1;
