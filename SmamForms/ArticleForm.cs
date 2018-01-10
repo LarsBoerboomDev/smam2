@@ -23,7 +23,14 @@ namespace SmamForms
             InitializeComponent();
             smamControl = new smamController();
             CenterToScreen(); //Form in het midden zetten
-            AddFonts();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             this.articleName = articlename;
             this.BackColor = Color.FromArgb(248, 248, 248);
         }
@@ -38,6 +45,7 @@ namespace SmamForms
         {
             this.Text = articleName;
             labelTitelArticle.Text = articleName;
+            labelTitelArticle.BringToFront();
             labelTitelArticle.Left = (this.ClientSize.Width - labelTitelArticle.Width) / 2;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
             string articleID = smamControl.GetArticleID(articleName);

@@ -82,7 +82,6 @@
             this.MinimizeBox = false;
             this.Name = "SplashScreenForm";
             this.Text = "SMAM";
-            this.Load += new System.EventHandler(this.SplashScreenForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
             this.ResumeLayout(false);

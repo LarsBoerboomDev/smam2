@@ -121,6 +121,16 @@ namespace SmamForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Lato {
+            get {
+                object obj = ResourceManager.GetObject("Lato", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Ontwikkeling {
@@ -137,6 +147,16 @@ namespace SmamForms.Properties {
             get {
                 object obj = ResourceManager.GetObject("poi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Reitam {
+            get {
+                object obj = ResourceManager.GetObject("Reitam", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

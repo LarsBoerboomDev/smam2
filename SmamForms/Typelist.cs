@@ -19,15 +19,23 @@ namespace SmamForms
         public Typelist(string naamtype)
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(248, 248, 248);
-            setbackground();
-            AddFonts();
             CenterToScreen(); //Form in het midden zetten
             smamControl = new smamController();
             this.naamType = naamtype;
+            setbackground();
+            loadBG();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
         }
         private void setbackground()
         {
+            this.BackColor = Color.FromArgb(248, 248, 248);
             foreach (Control item in this.Controls)
             {
                 item.BackColor = Color.FromArgb(248, 248, 248); 
@@ -78,6 +86,45 @@ namespace SmamForms
                 c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
             }
             labelTitle.Font = new Font(p.Families[1], 12, FontStyle.Regular);
+        }
+
+        private void loadBG()
+        {
+            string articleID = smamControl.GetArticleIDFromType(smamControl.GetTypeName(naamType));
+            Console.WriteLine(smamControl.GetBackgroundURL(articleID));
+            try
+            {
+                pictureBox1.Load(smamControl.GetBackgroundURL(articleID));
+                foreach (Control item in this.Controls)
+                {
+                    if (item.Name != "labelTitelArticle" && item.Name != "buttonBack")
+                    {
+                        item.BackColor = Color.FromArgb(248, 248, 248);
+                    }
+                    labelTitle.Parent = pictureBox1;
+                    labelTitle.BackColor = Color.Transparent;
+                    labelTitle.ForeColor = Color.White;
+                    buttonBack.Parent = pictureBox1;
+                    buttonBack.BackColor = Color.Transparent;
+                    buttonBack.BringToFront();
+                    labelTitle.BringToFront();
+                }
+            }
+            catch (Exception exception)
+            {
+                labelTitle.ForeColor = Color.Black;
+                foreach (Control item in this.Controls)
+                {
+                    if (item.Name != "buttonBack")
+                    {
+                        item.BackColor = Color.FromArgb(248, 248, 248);
+                    }
+
+                }
+                buttonBack.BringToFront();
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
+            labelTitle.Focus(); //focussen op een label zorgt ervoor dat er geen knipperende cursor is
         }
 
     }

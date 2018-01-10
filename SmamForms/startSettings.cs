@@ -18,7 +18,14 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            AddFonts();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             designing();
             //label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }

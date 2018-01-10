@@ -22,7 +22,14 @@ namespace SmamForms
             this.BackColor = Color.FromArgb(248, 248, 248);
             setbackground();
             CenterToScreen();
-            AddFonts();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             fillHint();
         }
 

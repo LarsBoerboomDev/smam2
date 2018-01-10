@@ -80,6 +80,11 @@ namespace SmamForms
             return Dbconn.GetArticleID(articlename);
         }
 
+        public string GetArticleIDFromType(string type)
+        {
+            return Dbconn.GetArticleIDFromType(type);
+        }
+
         public override string ToString()
         {
             //toString methode voor een methode

@@ -202,7 +202,7 @@ namespace SmamForms
             {
                 conn = new MySqlConnection(connectionString);
             }
-            string query = "SELECT URL FROM `image` WHERE Article_idArticles = '" + articleID + "' AND `Name` <> 'background'";
+            string query = "SELECT URL FROM `image` WHERE Article_idArticles = '" + articleID + "' AND `Name` <> 'background' OR 'Header'";
             Console.WriteLine(query);
             List<string> articleURL = new List<string>();
             DataTable dataTable = new DataTable();
@@ -232,6 +232,26 @@ namespace SmamForms
             foreach (DataRow item in dataTable.Rows)
             {
                 output = item["idArticles"].ToString();
+            }
+            return output;
+        }
+
+        public string GetArticleIDFromType(string type)
+        {
+            if (conn == null)
+            {
+                conn = new MySqlConnection(connectionString);
+            }
+            string query = "SELECT Min(idArticles) FROM `article` WHERE `types_idtypes` = (SELECT idtypes FROM `type` WHERE typeName = '" + type + "')";
+            Console.WriteLine(query);
+            DataTable dataTable = new DataTable();
+            MySqlCommand querycmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            mySqlDataAdapter.SelectCommand = querycmd;
+            mySqlDataAdapter.Fill(dataTable);
+            foreach (DataRow item in dataTable.Rows)
+            {
+                output = item["Min(idArticles)"].ToString();
             }
             return output;
         }

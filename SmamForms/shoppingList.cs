@@ -18,10 +18,16 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            AddFonts();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             setbackground();
             smam = new smamController();
-            
             fillTypes();
         }
         private void setbackground()

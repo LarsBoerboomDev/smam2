@@ -22,13 +22,17 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            AddFonts();
-            this.BackColor = Color.FromArgb(248, 248, 248);
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             setbackground();
             saveUserSettings settings = new saveUserSettings();
             city = settings.getCity();
-            this.Text = city;
-            comboBox1.SelectedIndex = 0;
             InitializeChromium();
         }
 
@@ -51,12 +55,14 @@ namespace SmamForms
 
         private void setbackground()
         {
+            this.BackColor = Color.FromArgb(248, 248, 248);
             foreach (Control item in Controls)
             {
                 item.ForeColor = Color.FromArgb(248, 248, 248);
             }
             comboBox1.BackColor = Color.White;
             comboBox1.ForeColor = Color.Black;
+            comboBox1.SelectedIndex = 0;
         }
         public void InitializeChromium()
         {
