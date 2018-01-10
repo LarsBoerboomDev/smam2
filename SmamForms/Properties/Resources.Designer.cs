@@ -103,6 +103,16 @@ namespace SmamForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Huishouden {
+            get {
+                object obj = ResourceManager.GetObject("Huishouden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Koken {
             get {
                 object obj = ResourceManager.GetObject("Koken", resourceCulture);

@@ -31,13 +31,14 @@
             this.labelTipVDDag = new System.Windows.Forms.Label();
             this.labelHint = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSetting = new System.Windows.Forms.Button();
             this.buttonProf = new System.Windows.Forms.Button();
             this.buttonFinancien = new System.Windows.Forms.Button();
-            this.buttonRecept = new System.Windows.Forms.Button();
+            this.buttonHuishouden = new System.Windows.Forms.Button();
             this.buttonStudie = new System.Windows.Forms.Button();
             this.buttonShoppingList = new System.Windows.Forms.Button();
             this.buttonPOI = new System.Windows.Forms.Button();
-            this.buttonSetting = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,9 +64,10 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonProf);
             this.panel1.Controls.Add(this.buttonFinancien);
-            this.panel1.Controls.Add(this.buttonRecept);
+            this.panel1.Controls.Add(this.buttonHuishouden);
             this.panel1.Controls.Add(this.buttonStudie);
             this.panel1.Controls.Add(this.buttonShoppingList);
             this.panel1.Controls.Add(this.buttonPOI);
@@ -73,6 +75,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 531);
             this.panel1.TabIndex = 10;
+            // 
+            // buttonSetting
+            // 
+            this.buttonSetting.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSetting.BackgroundImage = global::SmamForms.Properties.Resources.Settings_icon;
+            this.buttonSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSetting.Location = new System.Drawing.Point(279, 12);
+            this.buttonSetting.Name = "buttonSetting";
+            this.buttonSetting.Size = new System.Drawing.Size(35, 35);
+            this.buttonSetting.TabIndex = 6;
+            this.buttonSetting.UseVisualStyleBackColor = false;
+            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
             // buttonProf
             // 
@@ -96,16 +110,16 @@
             this.buttonFinancien.UseVisualStyleBackColor = true;
             this.buttonFinancien.Click += new System.EventHandler(this.buttonFinancien_Click);
             // 
-            // buttonRecept
+            // buttonHuishouden
             // 
-            this.buttonRecept.BackgroundImage = global::SmamForms.Properties.Resources.Koken;
-            this.buttonRecept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonRecept.Location = new System.Drawing.Point(3, 355);
-            this.buttonRecept.Name = "buttonRecept";
-            this.buttonRecept.Size = new System.Drawing.Size(311, 120);
-            this.buttonRecept.TabIndex = 3;
-            this.buttonRecept.UseVisualStyleBackColor = true;
-            this.buttonRecept.Click += new System.EventHandler(this.button4_Click);
+            this.buttonHuishouden.BackgroundImage = global::SmamForms.Properties.Resources.Koken;
+            this.buttonHuishouden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHuishouden.Location = new System.Drawing.Point(3, 355);
+            this.buttonHuishouden.Name = "buttonHuishouden";
+            this.buttonHuishouden.Size = new System.Drawing.Size(311, 120);
+            this.buttonHuishouden.TabIndex = 3;
+            this.buttonHuishouden.UseVisualStyleBackColor = true;
+            this.buttonHuishouden.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttonStudie
             // 
@@ -140,17 +154,16 @@
             this.buttonPOI.UseVisualStyleBackColor = true;
             this.buttonPOI.Click += new System.EventHandler(this.button3_Click);
             // 
-            // buttonSetting
+            // button1
             // 
-            this.buttonSetting.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetting.BackgroundImage = global::SmamForms.Properties.Resources.Settings_icon;
-            this.buttonSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSetting.Location = new System.Drawing.Point(279, 12);
-            this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(35, 35);
-            this.buttonSetting.TabIndex = 6;
-            this.buttonSetting.UseVisualStyleBackColor = false;
-            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
+            this.button1.BackgroundImage = global::SmamForms.Properties.Resources.Huishouden;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(3, 698);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(311, 120);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button2_Click);
             // 
             // homePage
             // 
@@ -179,11 +192,12 @@
         private System.Windows.Forms.Label labelHint;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonFinancien;
-        private System.Windows.Forms.Button buttonRecept;
+        private System.Windows.Forms.Button buttonHuishouden;
         private System.Windows.Forms.Button buttonStudie;
         private System.Windows.Forms.Button buttonShoppingList;
         private System.Windows.Forms.Button buttonPOI;
         private System.Windows.Forms.Button buttonProf;
         private System.Windows.Forms.Button buttonSetting;
+        private System.Windows.Forms.Button button1;
     }
 }

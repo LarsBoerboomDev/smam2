@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Grocery = new System.Windows.Forms.Button();
             this.poi = new System.Windows.Forms.Button();
+            this.buttonStudie = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,11 +101,22 @@
             this.poi.TabIndex = 0;
             this.poi.UseVisualStyleBackColor = true;
             // 
+            // buttonStudie
+            // 
+            this.buttonStudie.BackgroundImage = global::SmamForms.Properties.Resources.Huishouden;
+            this.buttonStudie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStudie.Location = new System.Drawing.Point(447, 182);
+            this.buttonStudie.Name = "buttonStudie";
+            this.buttonStudie.Size = new System.Drawing.Size(311, 120);
+            this.buttonStudie.TabIndex = 3;
+            this.buttonStudie.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 611);
+            this.ClientSize = new System.Drawing.Size(914, 611);
+            this.Controls.Add(this.buttonStudie);
             this.Controls.Add(this.panel1);
             this.Name = "Home";
             this.Text = "Home";
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonStudie;
     }
 }
