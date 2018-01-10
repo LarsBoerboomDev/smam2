@@ -17,11 +17,19 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             smam = new smamController();
             
             fillTypes();
         }
-
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
+        }
         private void fillTypes()
         {
             foreach (string type in smam.getGroceryTypes())

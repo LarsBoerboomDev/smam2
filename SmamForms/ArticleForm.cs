@@ -19,11 +19,19 @@ namespace SmamForms
         public ArticleForm(string articlename) //constructor
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            setbackground();
             smamControl = new smamController();
             CenterToScreen(); //Form in het midden zetten
             this.articleName = articlename;
         }
-
+        private void setbackground()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = Color.FromArgb(248, 248, 248);
+            }
+        }
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Drukte backbutton in");
