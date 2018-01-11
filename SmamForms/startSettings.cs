@@ -29,7 +29,7 @@ namespace SmamForms
             designing();
             //label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }
-        private void designing()
+        private void designing()//zorgt ervoor dat de label transperant zijn
         {
 
             pictureBoxlogo.Parent = pictureBox1;
@@ -62,11 +62,11 @@ namespace SmamForms
                     }
                 }
             }
-            if(isFilledIn == false)
+            if(isFilledIn == false)//als er iets niet is ingevuld geeft die een error message
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld");
             }
-            else
+            else//anders slaat die alle ingevulde informatie op in de userSettings en gaat door naar de homepagina
             {
                 save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, Convert.ToString(numericUpDown1.Value));
                 Properties.Settings.Default.hasStarted = 1.ToString();

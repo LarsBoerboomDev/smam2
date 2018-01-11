@@ -82,7 +82,7 @@ namespace SmamForms
             try
             {
                 pictureBox1.Load(smamControl.GetBackgroundURL(articleID));
-                foreach (Control item in this.Controls)
+                foreach (Control item in this.Controls)//kijkt tussen al de controls of er controls bestaan met de if statement namen
                 {
                     if (item.Name != "labelTitelArticle" && item.Name != "buttonBack")
                     {

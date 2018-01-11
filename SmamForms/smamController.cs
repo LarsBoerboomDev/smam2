@@ -53,7 +53,7 @@ namespace SmamForms
             articleForm = null;
         }
 
-        public void openTypelist(string type)
+        public void openTypelist(string type)//opent de algemene type list
         {
             Typelist typelist = new Typelist(type);
             typelist.ShowDialog();
