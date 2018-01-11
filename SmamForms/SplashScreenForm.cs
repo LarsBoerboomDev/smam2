@@ -40,7 +40,7 @@ namespace SmamForms
         }
         private void checkStart()
         {
-            if (Properties.Settings.Default.hasStarted == "1") //als settings bestaan
+            if (Properties.Settings.Default.hasStarted == "1") //als de app al is geinstalleerd dan start je een timer zo niet dan laat je de button zien
             {
                 time.Enabled = true;
                 time.Interval = 750;
@@ -52,7 +52,7 @@ namespace SmamForms
             }
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)//als de gebruiker al heeft geinstalleerd dan gaat die automatisch door naar de homepage
         {
             time.Enabled = false;
             homePage home = new homePage();

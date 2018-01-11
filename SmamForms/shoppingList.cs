@@ -43,7 +43,7 @@ namespace SmamForms
             comboBoxTypes.BackColor = Color.White;
             comboBoxTypes.ForeColor = Color.Black;
         }
-        private void fillTypes()
+        private void fillTypes()//vult de combobox met de grocery types
         {
             foreach (string type in smam.getGroceryTypes())
             {
@@ -52,7 +52,7 @@ namespace SmamForms
             comboBoxTypes.SelectedIndex = 0;
             fillCheckList();
         }
-        private void fillCheckList()
+        private void fillCheckList()//vult de checkbox list met de producten
         {
             checkedListBoxProducts.Items.Clear();
             foreach (string item in smam.getGroceryProducts(comboBoxTypes.Text))
@@ -61,7 +61,7 @@ namespace SmamForms
             }
         }
 
-        private void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)//als de type is veranderd clear de checklistbox en vul hem opnieuw
         {
             checkedListBoxProducts.Items.Clear();
             fillCheckList();

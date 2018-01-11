@@ -51,7 +51,7 @@ namespace SmamForms
                 }
             }
         }
-        private void getSettings()
+        private void getSettings()//haalt de settings op uit een usersettings object
         {
             settings = new saveUserSettings();
             userSetting userSettings = settings.getSettings();
@@ -63,7 +63,7 @@ namespace SmamForms
             textBoxStreet.Text = userSettings.Street;
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)//slaat de ingevoerde settings op 
         {
             bool isFilledIn = true;
             foreach (Control item in this.Controls)
@@ -76,7 +76,7 @@ namespace SmamForms
                     }
                 }
             }
-            if (isFilledIn == false)
+            if (isFilledIn == false)//als niet alles is ingevuld dan geeft die een error message
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld");
             }

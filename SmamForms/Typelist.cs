@@ -42,7 +42,7 @@ namespace SmamForms
             }
         }
 
-        private void Typelist_Load(object sender, EventArgs e)
+        private void Typelist_Load(object sender, EventArgs e)//laat alle artikelen in van een type die mee komt via de constructor
         {
             this.Text = smamControl.GetTypeName(naamType);
             labelTitle.Text = smamControl.GetTypeName(naamType);
@@ -59,7 +59,7 @@ namespace SmamForms
             this.Hide();
         }
 
-        private void listBox1_DoubleClick(object sender, EventArgs e)
+        private void listBox1_DoubleClick(object sender, EventArgs e)//als je dubbelklikt gaat die door naar het geklikte artikel
         {
             try
             {
@@ -70,7 +70,7 @@ namespace SmamForms
             }
             catch (Exception exception)
             {
-                ExceptionToText ex = new ExceptionToText(exception.ToString());
+                ExceptionToText ex = new ExceptionToText(exception.ToString());//als er iets fout is schrijft die in het log bestand via ExceptionToText klasse
             }
         }
 
