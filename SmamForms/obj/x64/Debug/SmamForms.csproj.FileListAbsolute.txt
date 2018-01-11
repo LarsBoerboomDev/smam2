@@ -88,3 +88,5 @@ C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csproj.CoreCompil
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.exe
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.pdb
 C:\Users\larsb\Desktop\smam2\SmamForms\obj\x64\Debug\SmamForms.csprojResolveAssemblyReference.cache
+C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\Resources\Lato.ttf
+C:\Users\larsb\Desktop\smam2\SmamForms\bin\x64\Debug\Resources\Reitam.otf
