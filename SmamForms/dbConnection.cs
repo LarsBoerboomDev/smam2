@@ -20,7 +20,7 @@ namespace SmamForms
 
         public dbConnection()
         {
-            connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";
+            connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";//de connectionstring met de wachtwoorden etc om te verbinden
 
             try
             {
@@ -74,7 +74,7 @@ namespace SmamForms
             return articletitles;
         }
 
-        public string GetTypeName(string type)
+        public string GetTypeName(string type)//geeft een typenaam terug uit de database
         {
             if (conn == null)
             {
@@ -94,7 +94,7 @@ namespace SmamForms
             return output;
         }
 
-        public Hint getHint()
+        public Hint getHint()//geeft een hint object terug
         {
             DataTable table = new DataTable();
             try
@@ -121,7 +121,7 @@ namespace SmamForms
             }
             return hint;
         }
-        public List<string> getGroceryTypes()
+        public List<string> getGroceryTypes()//geeft een lijst terug met boodschappen types
         {
             DataTable table = new DataTable();
             conn.Open();
@@ -138,7 +138,7 @@ namespace SmamForms
             }
             return types;
         }
-        private string getGroceryId(string type)
+        private string getGroceryId(string type)//geeft de id terug van een grocery 
         {
             DataTable table = new DataTable();
             
@@ -155,7 +155,7 @@ namespace SmamForms
             }
             return id;
         }
-        public List<string> getGroceryProducts(string type)
+        public List<string> getGroceryProducts(string type)//geeft een lijst terug met grocery producten
         {
             DataTable table = new DataTable();
             conn.Open();
@@ -175,7 +175,7 @@ namespace SmamForms
             return products;
         }
 
-        public string GetBackgroundURL(string articleID)
+        public string GetBackgroundURL(string articleID)//haalt de url op van een background
         {
             if (conn == null)
             {
@@ -196,7 +196,7 @@ namespace SmamForms
         } 
 
 
-        public List<string> GetImageURL(string articleID)
+        public List<string> GetImageURL(string articleID)//geeft een lijst terug met image urls 
         {
             if (conn == null)
             {
@@ -217,7 +217,7 @@ namespace SmamForms
             return articleURL;
         }
 
-        public string GetArticleID(string articlename)
+        public string GetArticleID(string articlename)//geeft de id van een artikel terug
         {
             if (conn == null)
             {
@@ -236,7 +236,7 @@ namespace SmamForms
             return output;
         }
 
-        public string GetArticleIDFromType(string type)
+        public string GetArticleIDFromType(string type)//geeft de artikel id terug van een type 
         {
             if (conn == null)
             {

@@ -16,7 +16,8 @@ namespace SmamForms
         {
             return Properties.Settings.Default.Name.ToString() + " - " + Properties.Settings.Default.City.ToString() + " - " + Properties.Settings.Default.School.ToString() + " - " + Properties.Settings.Default.Education.ToString() + " - " + Properties.Settings.Default.dayRent.ToString();      
         }
-        public void saveUser(string name, string city, string street, string school, string education, string dayrent) {
+        public void saveUser(string name, string city, string street, string school, string education, string dayrent)//slaat alle properties op in de user settings
+        {
             Properties.Settings.Default.Name = name;
             Properties.Settings.Default.City = city;
             Properties.Settings.Default.Street = street;
@@ -34,7 +35,7 @@ namespace SmamForms
         {
             return Properties.Settings.Default.City;
         }
-        public userSetting getSettings()
+        public userSetting getSettings()//geeft een userSetting object terug
         {
             userSetting setting = new userSetting();
             setting.Name = Properties.Settings.Default.Name;
@@ -47,7 +48,7 @@ namespace SmamForms
         }
     }
 
-    class userSetting
+    class userSetting //usersetting object
     {
         private string name;
         private string city;
