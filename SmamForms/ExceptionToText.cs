@@ -15,11 +15,18 @@ namespace SmamForms
         public ExceptionToText(string details)
         {
             this.Details = details;
-            using (sw = File.AppendText(@"D:\exceptionlog.txt")) //tekstbestand maken indien niet bestaat
+            try
             {
-                sw.WriteLine(details.ToString()); //exception details schrijven
-                sw.WriteLine(DateTime.Now.ToLongDateString() + " - " + DateTime.Now.ToLongTimeString()); //tijd en datum schrijven
-                sw.WriteLine(""); //wit regel tovoegen
+                using (sw = File.AppendText(@"D:\exceptionlog.txt")) //tekstbestand maken indien niet bestaat
+                {
+                    sw.WriteLine(details.ToString()); //exception details schrijven
+                    sw.WriteLine(DateTime.Now.ToLongDateString() + " - " + DateTime.Now.ToLongTimeString()); //tijd en datum schrijven
+                    sw.WriteLine(""); //wit regel tovoegen
+                }
+            }
+            catch (Exception)
+            {
+                
             }
             sw.Close();
         }
