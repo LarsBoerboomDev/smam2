@@ -28,38 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTipVDDag = new System.Windows.Forms.Label();
             this.labelHint = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSetting = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonProf = new System.Windows.Forms.Button();
             this.buttonFinancien = new System.Windows.Forms.Button();
             this.buttonHuishouden = new System.Windows.Forms.Button();
             this.buttonStudie = new System.Windows.Forms.Button();
             this.buttonShoppingList = new System.Windows.Forms.Button();
             this.buttonPOI = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSetting = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelTipVDDag
-            // 
-            this.labelTipVDDag.AutoSize = true;
-            this.labelTipVDDag.Location = new System.Drawing.Point(123, 9);
-            this.labelTipVDDag.Name = "labelTipVDDag";
-            this.labelTipVDDag.Size = new System.Drawing.Size(79, 13);
-            this.labelTipVDDag.TabIndex = 0;
-            this.labelTipVDDag.Text = "Tip van de dag";
-            // 
             // labelHint
             // 
-            this.labelHint.Location = new System.Drawing.Point(53, 22);
+            this.labelHint.Location = new System.Drawing.Point(53, 9);
             this.labelHint.MaximumSize = new System.Drawing.Size(220, 51);
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(220, 51);
             this.labelHint.TabIndex = 1;
             this.labelHint.Text = "Hier komt een tip";
-            this.labelHint.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelHint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -71,22 +61,21 @@
             this.panel1.Controls.Add(this.buttonStudie);
             this.panel1.Controls.Add(this.buttonShoppingList);
             this.panel1.Controls.Add(this.buttonPOI);
-            this.panel1.Location = new System.Drawing.Point(2, 76);
+            this.panel1.Location = new System.Drawing.Point(-4, 65);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 531);
             this.panel1.TabIndex = 10;
             // 
-            // buttonSetting
+            // button1
             // 
-            this.buttonSetting.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSetting.BackgroundImage = global::SmamForms.Properties.Resources.Settings_icon;
-            this.buttonSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSetting.Location = new System.Drawing.Point(279, 12);
-            this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(35, 35);
-            this.buttonSetting.TabIndex = 6;
-            this.buttonSetting.UseVisualStyleBackColor = false;
-            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
+            this.button1.BackgroundImage = global::SmamForms.Properties.Resources.Huishouden;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(3, 698);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(311, 120);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonProf
             // 
@@ -154,16 +143,17 @@
             this.buttonPOI.UseVisualStyleBackColor = true;
             this.buttonPOI.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // buttonSetting
             // 
-            this.button1.BackgroundImage = global::SmamForms.Properties.Resources.Huishouden;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(3, 698);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(311, 120);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSetting.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSetting.BackgroundImage = global::SmamForms.Properties.Resources.Settings_icon;
+            this.buttonSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSetting.Location = new System.Drawing.Point(279, 18);
+            this.buttonSetting.Name = "buttonSetting";
+            this.buttonSetting.Size = new System.Drawing.Size(35, 35);
+            this.buttonSetting.TabIndex = 6;
+            this.buttonSetting.UseVisualStyleBackColor = false;
+            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
             // homePage
             // 
@@ -174,7 +164,6 @@
             this.Controls.Add(this.buttonSetting);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelHint);
-            this.Controls.Add(this.labelTipVDDag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -182,13 +171,10 @@
             this.Text = "SMAM";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelTipVDDag;
         private System.Windows.Forms.Label labelHint;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonFinancien;

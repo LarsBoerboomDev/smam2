@@ -55,7 +55,7 @@
             this.labelTitelArticle.BackColor = System.Drawing.Color.Transparent;
             this.labelTitelArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.labelTitelArticle.ForeColor = System.Drawing.Color.White;
-            this.labelTitelArticle.Location = new System.Drawing.Point(55, 18);
+            this.labelTitelArticle.Location = new System.Drawing.Point(54, 22);
             this.labelTitelArticle.Name = "labelTitelArticle";
             this.labelTitelArticle.Size = new System.Drawing.Size(159, 25);
             this.labelTitelArticle.TabIndex = 1;

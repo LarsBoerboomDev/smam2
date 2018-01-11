@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.IO;
 
 namespace SmamForms
 {
@@ -27,6 +29,14 @@ namespace SmamForms
             //   Settings.Default.Reset();
             //}
             checkStart();
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
         }
         private void checkStart()
         {
@@ -59,10 +69,26 @@ namespace SmamForms
         }
         private void designing()
         {
-            
             pictureBoxlogo.Parent = pictureBox1;
             pictureBoxlogo.BackColor = Color.Transparent;
             pictureBoxlogo.Location = new Point(101, 235);
         }
+
+       
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+            }
+        }
+
+        
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -17,18 +18,30 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            this.BackColor = Color.FromArgb(248, 248, 248);
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             setbackground();
             smam = new smamController();
-            
             fillTypes();
         }
         private void setbackground()
         {
+            this.BackColor = Color.FromArgb(248, 248, 248);
             foreach (Control item in this.Controls)
             {
-                item.BackColor = Color.FromArgb(248, 248, 248);
+                if (item.Name != "buttonBack")
+                {
+                    item.BackColor = Color.FromArgb(248, 248, 248);
+                }
             }
+            comboBoxTypes.BackColor = Color.White;
+            comboBoxTypes.ForeColor = Color.Black;
         }
         private void fillTypes()
         {
@@ -59,5 +72,19 @@ namespace SmamForms
             Console.WriteLine("Drukte backbutton in");
             this.Hide();
         }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 12, FontStyle.Regular);
+            }
+        }
+
     }
 }

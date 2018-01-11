@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 using CefSharp;
 using CefSharp.WinForms;
 
@@ -21,20 +22,47 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
-            this.BackColor = Color.FromArgb(248, 248, 248);
+            try
+            {
+                AddFonts();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
             setbackground();
             saveUserSettings settings = new saveUserSettings();
             city = settings.getCity();
-            this.Text = city;
-            comboBox1.SelectedIndex = 0;
             InitializeChromium();
         }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 12, FontStyle.Regular);
+                if (c == comboBox1)
+                {
+                    c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+                }
+            }
+        }
+
         private void setbackground()
         {
-            foreach (Control item in this.Controls)
+            this.BackColor = Color.FromArgb(248, 248, 248);
+            foreach (Control item in Controls)
             {
-                item.BackColor = Color.FromArgb(248, 248, 248);
+                item.ForeColor = Color.FromArgb(248, 248, 248);
             }
+            comboBox1.BackColor = Color.White;
+            comboBox1.ForeColor = Color.Black;
+            comboBox1.SelectedIndex = 0;
         }
         public void InitializeChromium()
         {

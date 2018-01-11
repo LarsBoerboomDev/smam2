@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Text;
 
 namespace SmamForms
 {
@@ -19,19 +21,20 @@ namespace SmamForms
         public ArticleForm(string articlename) //constructor
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(248, 248, 248);
-            setbackground();
             smamControl = new smamController();
             CenterToScreen(); //Form in het midden zetten
-            this.articleName = articlename;
-        }
-        private void setbackground()
-        {
-            foreach (Control item in this.Controls)
+            try
             {
-                item.BackColor = Color.FromArgb(248, 248, 248);
+                AddFonts();
             }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
+            this.articleName = articlename;
+            this.BackColor = Color.FromArgb(248, 248, 248);
         }
+        
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Drukte backbutton in");
@@ -42,6 +45,7 @@ namespace SmamForms
         {
             this.Text = articleName;
             labelTitelArticle.Text = articleName;
+            labelTitelArticle.BringToFront();
             labelTitelArticle.Left = (this.ClientSize.Width - labelTitelArticle.Width) / 2;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
             string articleID = smamControl.GetArticleID(articleName);
@@ -78,17 +82,45 @@ namespace SmamForms
             try
             {
                 pictureBox1.Load(smamControl.GetBackgroundURL(articleID));
+                foreach (Control item in this.Controls)
+                {
+                    if (item.Name != "labelTitelArticle" && item.Name != "buttonBack")
+                    {
+                        item.BackColor = Color.FromArgb(248, 248, 248);
+                    }
+                }
             }
             catch (Exception exception)
             {
                 labelTitelArticle.ForeColor = Color.Black;
-                pictureBox1.BackColor = Color.White;
+                foreach (Control item in this.Controls)
+                {
+                    if (item.Name != "buttonBack")
+                    {
+                        item.BackColor = Color.FromArgb(248, 248, 248);
+                    }
+                    
+                }
                 buttonBack.BringToFront();
                 ExceptionToText ex = new ExceptionToText(exception.ToString());
             }
             labelTitelArticle.Parent = pictureBox1;
             buttonBack.Parent = pictureBox1;
             labelTitelArticle.Focus(); //focussen op een label zorgt ervoor dat er geen knipperende cursor is
+        }
+
+        private void AddFonts()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(RunningPath);
+            PrivateFontCollection p = new PrivateFontCollection();
+            p.AddFontFile(RunningPath + @"Reitam.otf");
+            p.AddFontFile(RunningPath + @"Lato.ttf");
+            foreach (Control c in Controls)
+            {
+                c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+            }
+            labelTitelArticle.Font = new Font(p.Families[1], 12, FontStyle.Regular);
         }
 
         private void txtArticleText_MouseDown(object sender, MouseEventArgs e)

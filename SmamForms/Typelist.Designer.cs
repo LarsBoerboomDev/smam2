@@ -32,6 +32,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -59,7 +61,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.BackColor = System.Drawing.Color.White;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
@@ -70,6 +72,14 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 50);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // Typelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,10 +89,12 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Typelist";
             this.Text = "Typelist";
             this.Load += new System.EventHandler(this.Typelist_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,5 +104,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
