@@ -106,8 +106,8 @@ namespace SmamForms
                     labelTitle.ForeColor = Color.White;
                     buttonBack.Parent = pictureBox1;
                     buttonBack.BackColor = Color.Transparent;
-                    buttonBack.BringToFront();
                     labelTitle.BringToFront();
+                    buttonBack.BringToFront();
                 }
             }
             catch (Exception exception)

@@ -41,9 +41,13 @@ namespace SmamForms
                 {
                     item.BackColor = Color.Transparent;
                 }
-                if (item is TextBox || item is NumericUpDown || item.Name == "buttonSave")
+                if (item is TextBox || item is NumericUpDown)
                 {
                     item.BackColor = Color.White;
+                }
+                if (item.Name == "buttonSave")
+                {
+
                 }
                 else
                 {

@@ -31,38 +31,25 @@ namespace SmamForms
         }
         private void designing()//zorgt ervoor dat de label transperant zijn
         {
-
             pictureBoxlogo.Parent = pictureBox1;
             pictureBoxlogo.BackColor = Color.Transparent;
             pictureBoxlogo.Location = new Point(89, 38);
-            label2.Parent = pictureBox1;
-            label2.Location = new Point(12, 236);
-            label3.Parent = pictureBox1;
-            label3.Location = new Point(12, 291);
-            label4.Parent = pictureBox1;
-            label4.Location = new Point(12, 348);
-            label5.Parent = pictureBox1;
-            label5.Location = new Point(12, 408);
-            label6.Parent = pictureBox1;
-            label6.Location = new Point(12, 466);
-            label7.Parent = pictureBox1;
-            label7.Location = new Point(12, 523);
-
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             saveUserSettings save = new saveUserSettings();
             bool isFilledIn = true;
             foreach (Control item in this.Controls)
             {
-                if(item is TextBox)
+                if (item is TextBox)
                 {
-                    if(string.IsNullOrEmpty(((TextBox)item).Text)){
+                    if (string.IsNullOrEmpty(((TextBox)item).Text)) {
                         isFilledIn = false;
                     }
                 }
             }
-            if(isFilledIn == false)//als er iets niet is ingevuld geeft die een error message
+            if (isFilledIn == false)//als er iets niet is ingevuld geeft die een error message
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld");
             }
@@ -73,8 +60,8 @@ namespace SmamForms
                 save.isInstalled();
                 homePage home = new homePage();
                 home.Show();
-                this.Hide();            
-            }            
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,6 +80,19 @@ namespace SmamForms
             {
                 c.Font = new Font(p.Families[0], 9, FontStyle.Regular);
             }
+        }
+
+        private void emptyTextBox(object sender, EventArgs e)
+        {
+            if ((sender as TextBox).Text == "Hoe heet je?" || (sender as TextBox).Text == "In welke plaats woon je?" || (sender as TextBox).Text == "In welke straat woon je?" || (sender as TextBox).Text == "Op welke school studeer je momenteel?" || (sender as TextBox).Text == "Welke opleiding volg je?") //als er een standaard tekst in staat
+            {
+                (sender as TextBox).Clear(); //maak de textbox leeg bij een klik
+            }
+        }
+
+        private void textBoxHuur_Click(object sender, EventArgs e)
+        {
+            pictureBoxlogo.Focus();
         }
     }
 }

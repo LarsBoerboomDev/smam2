@@ -33,6 +33,7 @@ namespace SmamForms
             setbackground();
             saveUserSettings settings = new saveUserSettings();
             city = settings.getCity();
+            this.Text = city;
             InitializeChromium();
         }
 
@@ -76,7 +77,7 @@ namespace SmamForms
             }
             
             
-            string url = "https://www.google.nl/maps/search/" + city + "+"  + comboBox1.SelectedItem;//de url waar de browser naar toe moet gaan 
+            string url = "https://www.google.nl/maps/search/" + Properties.Settings.Default.City + "+"  + comboBox1.SelectedItem;//de url waar de browser naar toe moet gaan 
             chromeBrowser = new ChromiumWebBrowser(url);
             //chromeBrowser = new ChromiumWebBrowser("https://www.google.nl/maps/search/oss+jumbo/@51.7496951,5.4861731,13z/data=!3m1!4b1");
             
