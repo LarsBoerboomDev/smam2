@@ -85,7 +85,7 @@ namespace SmamForms
             p.AddFontFile(RunningPath + @"Lato.ttf");
             foreach (Control c in Controls)
             {
-                c.Font = new Font(p.Families[0], 10, FontStyle.Regular);
+                c.Font = new Font(p.Families[0], 9, FontStyle.Regular);
             }
         }
 
